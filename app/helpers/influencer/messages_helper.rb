@@ -1,0 +1,2 @@
+module Influencer::MessagesHelper
+end

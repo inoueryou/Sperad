@@ -1,0 +1,2 @@
+module Influencer::HomesHelper
+end

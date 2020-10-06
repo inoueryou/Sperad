@@ -1,0 +1,2 @@
+module Influencer::GenresHelper
+end
