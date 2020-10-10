@@ -1,6 +1,6 @@
 class Influencer::InfluencersController < ApplicationController
 
-	before_action :set, only:[:show, :edit, :update, :quit]
+	before_action :set, only:[:show, :edit, :update, :quit, :out]
 
 	def show
 
@@ -22,6 +22,10 @@ class Influencer::InfluencersController < ApplicationController
 	end
 
 	def out
+		if @influencer.update(is_valid: "Invalid")
+			sign_out current_influencer
+		end
+		redirect_to new_influencer_session_path
 	end
 
 	private

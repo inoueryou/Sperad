@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 			resources :influencers,only: [:show, :edit, :update] do
 				member do
 					get 'quit', to: 'influencers#quit'
-					get 'out', to: 'influencers#out'
+					patch 'out', to: 'influencers#out'
 				end
 			end
 		end
