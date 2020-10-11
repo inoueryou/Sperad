@@ -7,12 +7,7 @@ class Influencer < ApplicationRecord
   #belongs_to :genre
   attachment :profile_image
 
-  validates :name, presence: true
-  validates :kana_name, presence: true, format: { with: /\A[\p{katakana}\p{blank}ー－]+\z/, message: 'はカタカナで入力して下さい。'}
-  validates :prefectures, presence: true
-  validates :sns_follower, presence: true,format:/\A[0-9]+\z/
-  validates :account, presence: true
-  validates :enthusiasm, presence: true
+
 
   def genre_name
   	genre = Genre.find_by(id: genre_id)
