@@ -1,5 +1,5 @@
 class Influencer::InfluencersController < ApplicationController
-
+	before_action :authenticate_influencer!
 	before_action :set, only:[:show, :edit, :update, :quit, :out]
 
 	def show
@@ -31,6 +31,9 @@ class Influencer::InfluencersController < ApplicationController
 	private
 	def set
 		@influencer = Influencer.find(params[:id])
+		unless @influencer == current_influencer
+		  redirect_to new_influencer_session_path
+		end
 	end
 
 	def influencer_params
