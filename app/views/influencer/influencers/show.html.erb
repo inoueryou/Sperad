@@ -9,45 +9,45 @@
 				</div>
 			</div>
 
-		<div class="col-xs-9">
-			<table class="table table-hover table-inverse table-bordered">
-				<tbody>
-					<tr>
-						<td>氏名</td>
-						<td><%= @influencer.name %></td>
-					</tr>
-					<tr>
-						<td>氏名（フリガナ）</td>
-						<td><%= @influencer.kana_name %></td>
-					</tr>
-					<tr>
-						<td>都道府県</td>
-						<td><%= @influencer.prefectures %></td>
-					</tr>
-					<tr>
-						<td>SNS総フォロワー</td>
-						<td><%= @influencer.sns_follower %></td>
-					</tr>
-					<tr>
-						<td>SNSアカウント</td>
-						<td><%= @influencer.account %></td>
-					</tr>
-					<tr>
-						<td>ジャンル</td>
-						<td><% if @influencer.genre_id %>
-						  	<%= @influencer.genre_name %>
-					  <% else %>
-		          ジャンル未選択
-						<% end %>
-						</td>
-					</tr>
-					<tr>
-						<td>意気込み</td>
-						<td><%= @influencer.enthusiasm %></td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
+			<div class="col-xs-9">
+				<table class="table table-hover table-inverse table-bordered">
+					<tbody>
+						<tr>
+							<td>氏名</td>
+							<td><%= @influencer.name %></td>
+						</tr>
+						<tr>
+							<td>氏名（フリガナ）</td>
+							<td><%= @influencer.kana_name %></td>
+						</tr>
+						<tr>
+							<td>都道府県</td>
+							<td><%= @influencer.prefectures %></td>
+						</tr>
+						<tr>
+							<td>SNS総フォロワー</td>
+							<td><%= @influencer.sns_follower %></td>
+						</tr>
+						<tr>
+							<td>SNSアカウント</td>
+							<td><%= @influencer.account %></td>
+						</tr>
+						<tr>
+							<td>ジャンル</td>
+							<td><% if @influencer.genre_id %>
+							  	<%= @influencer.genre_name %>
+						  <% else %>
+			          ジャンル未選択
+							<% end %>
+							</td>
+						</tr>
+						<tr>
+							<td>意気込み</td>
+							<td><%= @influencer.enthusiasm %></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
 
 			<div class="row">
 				<% if @influencer.id == current_influencer.id %>

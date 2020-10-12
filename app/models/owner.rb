@@ -3,6 +3,7 @@ class Owner < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+
   attachment :profile_image
 
   enum is_valid: {Available: true, Invalid: false}

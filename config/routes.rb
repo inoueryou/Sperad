@@ -34,7 +34,7 @@ Rails.application.routes.draw do
 			resources :owners,only: [:show, :edit, :update] do
 				member do
 					get 'quit', to: 'owners#quit'
-					get 'out', to: 'owners#out'
+					patch 'out', to: 'owners#out'
 				end
 			end
 		end
