@@ -1,0 +1,50 @@
+		<div class="container">
+				<div class="row">
+					<h2 class="well well-sm col-xs-3 text-center">インフルエンサー詳細</h2>
+				</div>
+
+				<div class="col-xs-3">
+					<div class="item-image">
+						<%= attachment_image_tag @influencer, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_img.jpg" %>
+					</div>
+				</div>
+
+			<div class="col-xs-9">
+				<table class="table table-hover table-inverse table-bordered">
+					<tbody>
+						<tr>
+							<td>氏名</td>
+							<td><%= @influencer.name %></td>
+						</tr>
+						<tr>
+							<td>氏名（フリガナ）</td>
+							<td><%= @influencer.kana_name %></td>
+						</tr>
+						<tr>
+							<td>都道府県</td>
+							<td><%= @influencer.prefectures %></td>
+						</tr>
+						<tr>
+							<td>SNS総フォロワー</td>
+							<td><%= @influencer.industry %></td>
+						</tr>
+						<tr>
+							<td>SNSアカウント</td>
+							<td><%= @influencer.account %></td>
+						</tr>
+						<tr>
+							<td>ジャンル</td>
+							<td><%= @influencer.genre.name %></td>
+						</tr>
+						<tr>
+							<td>意気込み</td>
+							<td><%= @influencer.enthusiasm %></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+				<div class="row">
+					<%= link_to "戻る", owners_influencer_path, class: "btn btn-info" %>
+				</div>
+			</div>
