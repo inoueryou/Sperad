@@ -1,0 +1,19 @@
+		<div class="container">
+			<div class="row">
+					<h2 class="well well-sm col-xs-3 text-center">お気に入り一覧</h2>
+			</div>
+
+			<div class="row">
+				<% @favorites.each do |favorite| %>
+					<div class="col-xs-3 text-center">
+						<%= link_to owner_influencer_path(favorite.influencer.id), class: "btn-link", :style=>"color:#0099FF;" do %>
+						<br>
+						<div class="influencer-owner">
+							<%= attachment_image_tag favorite.influencer, :profile_image, size: "180x130", class: "img-square", fallback: "no_img.jpg" %>
+						</div>
+						<%= favorite.influencer.name %>
+						<% end %>
+					</div>
+				<% end %>
+			</div>
+		</div>
