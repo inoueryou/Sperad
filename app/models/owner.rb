@@ -4,7 +4,11 @@ class Owner < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  has_many :favorites, dependent: :destroy
   attachment :profile_image
+  has_many :entries
+  has_many :messages
+  has_many :rooms, through: :entries
 
   enum is_valid: {Available: true, Invalid: false}
     def active_for_authentication?

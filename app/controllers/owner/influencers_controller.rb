@@ -4,15 +4,15 @@ class Owner::InfluencersController < ApplicationController
 	def index
 		@genres = Genre.all
 		if params["genre"]
-			@influencers = Influencer.where(genre_id: params["genre"])
+			@influencers = Influencer.where(genre_id: params["genre"]).page(params[:page]).per(8)
 			@genre = Genre.find(params["genre"])
 		else
-		@influencers = Influencer.where(is_valid: "Available")
+		@influencers = Influencer.where(is_valid: "Available").page(params[:page]).per(8)
 		end
 	end
 
 	def show
-		@infliencer = Influencer.find(params[:id])
+		@influencer = Influencer.find(params[:id])
 	end
 
 	private

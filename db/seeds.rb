@@ -15,3 +15,4 @@ Genre.create(name:"お金")
 Genre.create(name:"芸能")
 Genre.create(name:"政治")
 Genre.create(name:"その他")
+

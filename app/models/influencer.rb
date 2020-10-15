@@ -5,9 +5,15 @@ class Influencer < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   #belongs_to :genre
+  has_many :favorites, dependent: :destroy
   attachment :profile_image
+  has_many :entries
+  has_many :messages
+  has_many :rooms, through: :entries
 
-
+  def favorited_by?(owner)
+    Favorite.where(owner_id: owner.id).exists?
+  end
 
   def genre_name
   	genre = Genre.find_by(id: genre_id)
