@@ -31,3 +31,4 @@ Ignore the default SQLite database.
 /config/master.key
 
 .DS_Story
+/.env

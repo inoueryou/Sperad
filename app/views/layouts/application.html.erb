@@ -4,12 +4,32 @@
     <title>Sperad</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <script src="https://kit.fontawesome.com/b5fa4724ff.js" crossorigin="anonymous"></script>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+
+    <div class="wrapper">
+      <header>
+        <div class="container">
+          <div class="row">
+            <% if influencer_signed_in? %>
+              <%= render 'layouts/influencer_header' %>
+              <% else %>
+              <%= render 'layouts/owner_header' %>
+            <% end %>
+          </div>
+        </div>
+      </header>
+
+      <%= yield %>
+
+      <footer>
+        <P>©Spread</p>
+      </footer>
+
+    </div>
   </body>
 </html>

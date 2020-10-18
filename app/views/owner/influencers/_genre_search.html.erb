@@ -1,0 +1,20 @@
+		<div class="row">
+			<div class="col-xs-4">
+				<h2><span class="label label-primary">ジャンル検索</span></h2>
+				<% @genres.each do |genre| %>
+					<%= link_to owner_influencers_path(genre: genre.id) do %>
+					<%= genre.name %>
+				<% end %>
+				<% end %>
+			</div>
+
+			<% unless params["genre"] %>
+				<div class="col-xs-offset-6">
+					<h2 class="well well-sm col-xs-7 text-center">インフルエンサー一覧</h2>
+				</div>
+			<% else %>
+				<div class="col-xs-offset-6">
+					<h2 class="well well-sm col-xs-7 text-center"><%= @genre.name %>一覧</h2>
+				</div>
+			<% end %>
+		</div>

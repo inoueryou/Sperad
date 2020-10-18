@@ -1,0 +1,46 @@
+		<div class="container">
+				<div class="row">
+					<h2 class="well well-sm col-xs-3 text-center">クライアント詳細</h2>
+				</div>
+
+				<div class="col-xs-3">
+					<div class="item-image">
+						<%= attachment_image_tag @owner, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_img.jpg" %>
+					</div>
+				</div>
+
+			<div class="col-xs-9">
+				<table class="table table-hover table-inverse table-bordered">
+					<tbody>
+						<tr>
+							<td>会社or個人名</td>
+							<td><%= @owner.name %></td>
+						</tr>
+						<tr>
+							<td>会社or個人名（フリガナ）</td>
+							<td><%= @owner.kana_name %></td>
+						</tr>
+						<tr>
+							<td>都道府県</td>
+							<td><%= @owner.prefectures %></td>
+						</tr>
+						<tr>
+							<td>業種</td>
+							<td><%= @owner.industry %></td>
+						</tr>
+						<tr>
+							<td>HP,SNSアカウント</td>
+							<td><%= @owner.account %></td>
+						</tr>
+						<tr>
+							<td>事業内容</td>
+							<td><%= @owner.business_content %></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+				<div class="row">
+					<%= link_to "戻る", influencer_owners_path, class: "btn btn-info" %>
+				</div>
+			</div>

@@ -1,0 +1,19 @@
+		<div class="container">
+			<div class="row">
+					<h2 class="well well-sm col-xs-3 text-center">クライアント一覧</h2>
+			</div>
+
+				<div class="row">
+						<% @owners.each do |owners| %>
+							<div class="col-xs-3 text-center">
+								<%= link_to influencer_owner_path(owners.id), class: "btn-link", :style=>"color:#0099FF;" do %>
+								<br>
+								<div class="influencer-owner">
+									<%= attachment_image_tag owners, :profile_image, size: "180x130", class: "img-square", fallback: "no_img.jpg" %>
+								</div>
+								<%= owners.name %>
+								<% end %>
+							</div>
+						<% end %>
+				</div>
+		</div>

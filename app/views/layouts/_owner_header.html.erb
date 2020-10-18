@@ -1,0 +1,24 @@
+    <nav class="nav navbar-nav navbar-left">
+      <%= link_to owner_top_path do %>
+        <img src="/assets/logo.png" alt="logo" >
+      <% end %>
+    </nav>
+
+    <nav class="nav navbar-nav navbar-right">
+      <ul >
+        <% if owner_signed_in? %>
+          <span>
+            ようこそ、<%= current_owner.name %>さん！
+          </span>
+          <li><%= link_to 'マイページ', owner_path(current_owner) %></li>
+          <li><%= link_to 'インフルエンサー一覧', owner_influencers_path %></li>
+          <li><%= link_to 'お気に入り一覧', owner_favorites_path %></li>
+          <li><%= link_to 'チャット一覧', "#" %></li>
+          <li><%= link_to 'ログアウト', destroy_owner_session_path, method: :delete %></li>
+        <% else %>
+          <li><%= link_to 'About', "#" %></li>
+          <li><%= link_to '新規登録', new_owner_registration_path %></li>
+          <li><%= link_to 'ログイン', new_owner_session_path %></li>
+        <% end %>
+      </ul>
+    </nav>

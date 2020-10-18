@@ -1,0 +1,23 @@
+<div class="container">
+	<div class="row">
+		<br><br><br><br><br><br>
+		<h2 class="col-xs-12 text-center">本当に退会しますか？</h2>
+	</div>
+
+	<div class="row">
+		<br>
+		<p class="col-xs-12 text-center">
+			退会すると、会員登録情報や<br>
+			これまでのチャットが閲覧できなくなります。<br>
+			退会する場合は、「退会する」をクリックしてください。
+		</p>
+	</div>
+
+	<div class="row">
+		<br>
+		<div class="col-xs-12 text-center">
+		<%= link_to "退会しない", influencer_path(current_influencer), class: "btn btn-primary" %>
+		<%= link_to "退会する", out_influencer_path(@influencer.id), method: :patch, class: "btn btn-danger col-xs-offset-1" %>
+		</div>
+	</div>
+</div>
