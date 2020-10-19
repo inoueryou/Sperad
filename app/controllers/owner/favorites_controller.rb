@@ -6,20 +6,20 @@ class Owner::FavoritesController < ApplicationController
 	end
 
 	def create
-    favorite = current_owner.favorites.new(influencer_id: influencer.id)
+    favorite = current_owner.favorites.new(influencer_id: @influencer.id)
     favorite.save
     redirect_to owner_influencers_path
 	end
 
 	def destroy
-    favorite = current_owner.favorites.find_by(influencer_id: influencer.id)
+    favorite = current_owner.favorites.find_by(influencer_id: @influencer.id)
     favorite.destroy
     redirect_to owner_influencers_path
 	end
 
 	private
 	def set
-		influencer = Influencer.find(params[:influencer_id])
+		@influencer = Influencer.find(params[:influencer_id])
 	end
 
 	def favorite_params

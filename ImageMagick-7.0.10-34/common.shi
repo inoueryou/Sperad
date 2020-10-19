@@ -1,0 +1,27 @@
+# -*- shell-script -*-
+# Copyright 1999-2020 ImageMagick Studio LLC
+# Definitions of optional features and configuration values for this build.
+# Intended for use by test scripts.
+MAGICK_FEATURES='DPC HDRI Cipher OpenMP'
+top_srcdir='/home/vagrant/work/spread/ImageMagick-7.0.10-34'
+top_builddir='/home/vagrant/work/spread/ImageMagick-7.0.10-34'
+
+set -a
+COMPARE="/home/vagrant/work/spread/ImageMagick-7.0.10-34/utilities/magick compare"
+COMPOSITE="/home/vagrant/work/spread/ImageMagick-7.0.10-34/utilities/magick composite"
+CONJURE="/home/vagrant/work/spread/ImageMagick-7.0.10-34/utilities/magick conjure"
+CONVERT="/home/vagrant/work/spread/ImageMagick-7.0.10-34/utilities/magick convert"
+DISPLAY="/home/vagrant/work/spread/ImageMagick-7.0.10-34/utilities/magick display"
+IDENTIFY="/home/vagrant/work/spread/ImageMagick-7.0.10-34/utilities/magick identify"
+MAGICK="/home/vagrant/work/spread/ImageMagick-7.0.10-34/utilities/magick"
+MONTAGE="/home/vagrant/work/spread/ImageMagick-7.0.10-34/utilities/magick montage"
+VALIDATE="/home/vagrant/work/spread/ImageMagick-7.0.10-34/tests/validate"
+DRAWTEST="/home/vagrant/work/spread/ImageMagick-7.0.10-34/tests/drawtest"
+WANDTEST="/home/vagrant/work/spread/ImageMagick-7.0.10-34/tests/wandtest"
+LD_LIBRARY_PATH="/home/vagrant/work/spread/ImageMagick-7.0.10-34/MagickCore/.libs:/home/vagrant/work/spread/ImageMagick-7.0.10-34/MagickWand/.libs:${LD_LIBRARY_PATH}"
+MAGICK_CODER_MODULE_PATH="/home/vagrant/work/spread/ImageMagick-7.0.10-34/coders"
+MAGICK_CONFIGURE_PATH="/home/vagrant/work/spread/ImageMagick-7.0.10-34/config:/home/vagrant/work/spread/ImageMagick-7.0.10-34/config"
+MAGICK_FILTER_MODULE_PATH="/home/vagrant/work/spread/ImageMagick-7.0.10-34/filters"
+MAGICK_FONT="/home/vagrant/work/spread/ImageMagick-7.0.10-34/PerlMagick/demo/Generic.ttf"
+PATH="/home/vagrant/work/spread/ImageMagick-7.0.10-34/utilities:/home/vagrant/work/spread/ImageMagick-7.0.10-34/tests:${PATH}"
+set +a
