@@ -1,3 +1,217 @@
 // Place all the styles related to the abouts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.main-visual {
+	position: relative;
+}
+
+.main-visual-text {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  color: white;
+  font-weight: bold;
+  font-size: 2em;
+  font-family :Quicksand, sans-serif;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  margin: 0;
+  padding: 0;
+  }
+
+.influencers-btn {
+  position: absolute;
+  top: 70%;
+  left: 30%;
+  font-size: 22px;
+  font-family :Quicksand, sans-serif;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  margin: 0;
+  padding: 0;
+}
+
+.owner-btn {
+  position: absolute;
+  top: 80%;
+  left: 30%;
+  font-size: 4em;
+  font-family :Quicksand, sans-serif;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  margin: 0;
+  padding: 0;
+}
+
+.about {
+	margin-top: 100px;
+	text-align: center;
+}
+
+.about-content {
+	font-size: 4em;
+}
+
+.about-sub-content {
+	color: red;
+	margin-bottom: 50px;
+}
+
+.about-text {
+	font-size: 2em;
+}
+
+.about-logo {
+	text-align: center;
+}
+
+.back-color {
+  background-color:#d9d9d9;
+}
+
+.flow {
+  position: relative;
+  margin-top: 100px;
+  text-align: center;
+}
+
+.flow-content {
+  font-size: 4em;
+}
+
+.flow-sub-content {
+  color: red;
+  margin-bottom: 50px;
+}
+
+.flow-logo1 {
+  text-align: center;
+}
+
+.owner-flow-btn {
+  position: absolute;
+  top: 25%;
+  left: 70%;
+  font-size: 4em;
+  font-family :Quicksand, sans-serif;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  margin: 0;
+  padding: 0;
+}
+
+.flow-logo2 {
+  text-align: center;
+}
+
+.influencers-flow-btn {
+  position: absolute;
+  top: 70%;
+  left: 70%;
+  font-size: 22px;
+  font-family :Quicksand, sans-serif;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  margin: 0;
+  padding: 0;
+}
+
+.q-a {
+  position: relative;
+  margin-top: 100px;
+  text-align: center;
+}
+
+.q-a-content {
+  font-size: 4em;
+}
+
+.q-a-sub-content {
+  color: red;
+  margin-bottom: 50px;
+}
+
+.qanda{
+    margin-left:4em;
+}
+
+.qanda .a{
+    padding-bottom:0.5em;
+}
+
+.qanda .q:hover{
+    font-weight:bold;
+    color:#000;
+    cursor: pointer;
+}
+
+.qanda .q span {
+  color: red;
+  font-size: 30px;
+}
+
+.qanda .a:hover{
+    font-weight:bold;
+    cursor: pointer;
+}
+
+.qanda .a span {
+  color: blue;
+  font-size: 30px;
+}
+
+.qanda p{
+    margin-left:-2em;
+    text-indent:-2em;
+    padding-right:1em;
+}
+
+.qanda p span{
+    display:inline-block;
+    margin-left:1.5em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#back {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+}
+
+#back img {
+  width: 100px;
+}
+
+.main-visual img {
+	width: 100%;
+}
+
+.logo {
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  font-family :Quicksand, sans-serif;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  margin: 0;
+  padding: 0;
+}

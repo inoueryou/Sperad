@@ -12,10 +12,10 @@
           </span>
           <li><%= link_to 'マイページ', influencer_path(current_influencer) %></li>
           <li><%= link_to 'クライアント一覧', influencer_owners_path %></li>
-          <li><%= link_to 'チャット一覧', "#" %></li>
+          <li><%= link_to 'チャット一覧', rooms_path %></li>
           <li><%= link_to 'ログアウト', destroy_influencer_session_path, method: :delete %></li>
         <% else %>
-          <li><%= link_to 'About', "#" %></li>
+          <li><%= link_to 'About', about_top_path %></li>
           <li><%= link_to '新規登録', new_influencer_registration_path %></li>
           <li><%= link_to 'ログイン', new_influencer_session_path %></li>
         <% end %>

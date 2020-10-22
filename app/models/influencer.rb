@@ -7,7 +7,6 @@ class Influencer < ApplicationRecord
   #belongs_to :genre
   has_many :favorites, dependent: :destroy
   attachment :profile_image
-  has_many :entries
   has_many :messages
   has_many :rooms, through: :entries
 

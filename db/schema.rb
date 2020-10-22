@@ -10,15 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_15_044900) do
-
-  create_table "entries", force: :cascade do |t|
-    t.integer "influencer_id"
-    t.integer "owner_id"
-    t.integer "room_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
+ActiveRecord::Schema.define(version: 2020_10_15_043952) do
 
   create_table "favorites", force: :cascade do |t|
     t.integer "influencer_id"
@@ -57,11 +49,13 @@ ActiveRecord::Schema.define(version: 2020_10_15_044900) do
   create_table "messages", force: :cascade do |t|
     t.integer "influencer_id"
     t.integer "owner_id"
-    t.text "cotent"
-    t.integer "usertype"
+    t.integer "room_id"
+    t.text "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "room_id"
+    t.index ["influencer_id"], name: "index_messages_on_influencer_id"
+    t.index ["owner_id"], name: "index_messages_on_owner_id"
+    t.index ["room_id"], name: "index_messages_on_room_id"
   end
 
   create_table "owners", force: :cascade do |t|
@@ -86,9 +80,12 @@ ActiveRecord::Schema.define(version: 2020_10_15_044900) do
   end
 
   create_table "rooms", force: :cascade do |t|
-    t.string "name"
+    t.integer "influencer_id"
+    t.integer "owner_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["influencer_id"], name: "index_rooms_on_influencer_id"
+    t.index ["owner_id"], name: "index_rooms_on_owner_id"
   end
 
 end

@@ -15,21 +15,22 @@
       <header>
         <div class="container">
           <div class="row">
-            <% if influencer_signed_in? %>
-              <%= render 'layouts/influencer_header' %>
+            <% if !current_page?(about_top_path) %>
+              <% if influencer_signed_in? %>
+                <%= render 'layouts/influencer_header' %>
               <% else %>
-              <%= render 'layouts/owner_header' %>
+                <%= render 'layouts/owner_header' %>
+              <% end %>
             <% end %>
           </div>
         </div>
       </header>
-
       <%= yield %>
-
-      <footer>
-        <P>©Spread</p>
-      </footer>
-
+      <% if !current_page?(about_top_path) %>
+        <footer>
+          <P>©Spread</p>
+        </footer>
+      <% end %>
     </div>
   </body>
 </html>
