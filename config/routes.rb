@@ -41,14 +41,14 @@ Rails.application.routes.draw do
 
 		namespace :owner do
 			resources :influencers,only: [:index, :show]
-			resources :messages,only: [:index, :show, :create]
 			get 'top' => 'homes#top'
 			get 'favorites/', to: 'favorites#index'
 			post 'favorites/:influencer_id', to: 'favorites#create', as: 'favorite_create'
 			delete 'favorites/:influencer_id', to: 'favorites#destroy', as: 'favorite_delete'
 		end
 
-		resources :rooms
+		resources :messages,only: [:index, :show, :create]
+		resources :rooms,only: [:index, :show, :create, :destroy]
 
 	# about
 		get 'about/top' => 'abouts#top'
