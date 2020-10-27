@@ -51,6 +51,5 @@ Rails.application.routes.draw do
 		resources :rooms,only: [:index, :show, :create, :destroy]
 
 	# about
-		get 'about/top' => 'abouts#top'
-
+		root 'abouts#top'
 end

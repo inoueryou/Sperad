@@ -10,13 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_15_043952) do
+ActiveRecord::Schema.define(version: 2020_10_25_200132) do
 
   create_table "favorites", force: :cascade do |t|
     t.integer "influencer_id"
     t.integer "owner_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "is_valid", default: true, null: false
   end
 
   create_table "genres", force: :cascade do |t|

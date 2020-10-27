@@ -1,4 +1,4 @@
-document.addEventListener('turbolinks:load', function() {
+document.addEventListener('DOMContentLoaded', function() {
   App.room = App.cable.subscriptions.create({
     channel: "RoomChannel",
     room: $('#messages').data('room_id')

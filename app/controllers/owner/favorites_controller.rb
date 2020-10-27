@@ -1,8 +1,9 @@
 class Owner::FavoritesController < ApplicationController
 	before_action :set, only:[:create, :destroy]
+	before_action :authenticate_owner!
 
 	def index
-		@favorites = current_owner.favorites.all
+		@favorites = current_owner.favorites.where(is_valid: "Available")
 	end
 
 	def create
