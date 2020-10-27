@@ -22,10 +22,11 @@ class Influencer::InfluencersController < ApplicationController
 	end
 
 	def out
+		Favorite.where(influencer_id: @influencer.id).update(is_valid: "Invalid")
 		if @influencer.update(is_valid: "Invalid")
 			sign_out current_influencer
 		end
-		redirect_to new_influencer_session_path
+		redirect_to root_path
 	end
 
 	private

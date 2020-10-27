@@ -7,7 +7,7 @@ class Owner::InfluencersController < ApplicationController
 			@influencers = Influencer.where(genre_id: params["genre"]).page(params[:page]).per(8)
 			@genre = Genre.find(params["genre"])
 		else
-		@influencers = Influencer.where(is_valid: "Available").page(params[:page]).per(8)
+		@influencers = Influencer.where(is_valid: "Available")
 		end
 	end
 

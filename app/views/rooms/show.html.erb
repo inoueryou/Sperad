@@ -1,11 +1,14 @@
 <div class="container">
-  <div class="text-center">
-    <div id="messages" data-room_id="<%= @room.id %>">
-      <%= render @messages %>
-    </div>
-    <%= text_field_tag :content, nil %>
-    <%= button_tag "送信", id: "submit" %>
+  <div class="row">
+    <h2 class="well well-sm col-xs-3 text-center">チャット一覧</h2>
   </div>
+  <div id="messages" data-room_id="<%= @room.id %>">
+    <%= render @messages %>
+  </div>
+    <%= text_field_tag :content, nil, :size=>"60" %>
+    <%= button_tag "送信", id: "submit" %>
+    <%= link_to "戻る", rooms_path, class: "btn btn-info col-xs-offset-2" %>
 </div>
+
 
 

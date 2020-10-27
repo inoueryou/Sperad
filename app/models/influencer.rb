@@ -8,10 +8,10 @@ class Influencer < ApplicationRecord
   has_many :favorites, dependent: :destroy
   attachment :profile_image
   has_many :messages
-  has_many :rooms, through: :entries
+  has_many :rooms
 
   def favorited_by?(owner)
-    Favorite.where(owner_id: owner.id).exists?
+    Favorite.where(owner_id: owner.id, influencer_id: id).exists?
   end
 
   def genre_name

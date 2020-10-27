@@ -1,7 +1,10 @@
 class RoomsController < ApplicationController
-
 	def index
-		@rooms = Room.all
+		if current_influencer
+			@rooms = current_influencer.rooms
+		else
+			@rooms = current_owner.rooms
+		end
 	end
 
 	def create
