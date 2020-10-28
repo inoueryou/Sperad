@@ -9,6 +9,6 @@ class RoomChannel < ApplicationCable::Channel
 
   def speak(data)
 		room = Room.find(params[:room])
-		room.messages.create(influencer_id: room.influencer_id, owner_id: room.owner_id, content: data["message"] )
+		room.messages.create(influencer_id: room.influencer_id, owner_id: room.owner_id, sent_user: data["sent_user"], content: data["message"] )
   end
 end

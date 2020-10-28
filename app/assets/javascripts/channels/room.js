@@ -8,15 +8,16 @@ document.addEventListener('DOMContentLoaded', function() {
     received: function(data) {
       return $('#messages').append(data['message']);
     },
-    speak: function(message) {
+    speak: function(message, sent_user) {
       return this.perform('speak', {
-        message: message
+        message: message,
+        sent_user: sent_user
       });
     }
   });
 
   return $(document).on('click', "#submit", function(event) {
-    App.room.speak($("#content").val());
+    App.room.speak($("#content").val(), $("#sent_user").val());
     $("#content").val("");
     return event.preventDefault();
 	});
