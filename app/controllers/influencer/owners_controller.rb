@@ -6,6 +6,8 @@ class Influencer::OwnersController < ApplicationController
 
 	def show
 		@owner = Owner.find(params[:id])
+		@room = current_influencer.rooms.find_by(owner_id: @owner.id)
+
 	end
 
 	private
