@@ -48,16 +48,16 @@ ActiveRecord::Schema.define(version: 2020_10_27_121319) do
   end
 
   create_table "messages", force: :cascade do |t|
-    t.integer "influencer_id"
-    t.integer "owner_id"
-    t.integer "room_id"
+    t.integer "influencer_id_id"
+    t.integer "owner_id_id"
+    t.integer "room_id_id"
     t.text "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "sent_user"
-    t.index ["influencer_id"], name: "index_messages_on_influencer_id"
-    t.index ["owner_id"], name: "index_messages_on_owner_id"
-    t.index ["room_id"], name: "index_messages_on_room_id"
+    t.index ["influencer_id_id"], name: "index_messages_on_influencer_id_id"
+    t.index ["owner_id_id"], name: "index_messages_on_owner_id_id"
+    t.index ["room_id_id"], name: "index_messages_on_room_id_id"
   end
 
   create_table "owners", force: :cascade do |t|
@@ -82,12 +82,12 @@ ActiveRecord::Schema.define(version: 2020_10_27_121319) do
   end
 
   create_table "rooms", force: :cascade do |t|
-    t.integer "influencer_id"
-    t.integer "owner_id"
+    t.integer "influencer_id_id"
+    t.integer "owner_id_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["influencer_id"], name: "index_rooms_on_influencer_id"
-    t.index ["owner_id"], name: "index_rooms_on_owner_id"
+    t.index ["influencer_id_id"], name: "index_rooms_on_influencer_id_id"
+    t.index ["owner_id_id"], name: "index_rooms_on_owner_id_id"
   end
 
 end
