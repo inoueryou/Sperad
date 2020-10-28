@@ -28,9 +28,9 @@
 		<div class="flow">
 			<h1 class="flow-content">Flow</h1>
 			<p class="flow-sub-content">ご利用の流れ</p>
-			<div class="flow-logo1"><img src="/assets/flow1.png" alt="logo" ></div>
+			<div class="flow-logo1"><%= image_tag '/images/flow1.png' %></div>
 			<p class="owner-flow-btn"><%= link_to "無料登録", new_owner_registration_path, class: "btn btn-info btn-lg" %></p>
-			<div class="flow-logo2"><img src="/assets/flow2.png" alt="logo" ></div>
+			<div class="flow-logo2"><%= image_tag '/images/flow2.png' %></div>
 			<p class="influencers-flow-btn"><%= link_to "無料登録", new_influencer_registration_path, class: "btn btn-success btn-lg" %></p>
 		</div>
 	</div>
@@ -118,7 +118,7 @@
 </div>
 
 <div class="footer">
-	 <img src="/assets/touroku.jpg" alt="logo">
+	 <%= image_tag '/images/touroku.jpg' %>
   <p class="footer-text">
 	いますぐ登録!!</p>
   <p class="footer-influencers-btn"><%= link_to "インフルエンサーの方はこちら", new_influencer_registration_path, class: "btn btn-success btn-lg" %></p>
