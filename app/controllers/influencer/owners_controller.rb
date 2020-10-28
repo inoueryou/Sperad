@@ -1,11 +1,13 @@
 class Influencer::OwnersController < ApplicationController
-
+	before_action :authenticate_influencer!
 	def index
 		@owners = Owner.where(is_valid: "Available")
 	end
 
 	def show
 		@owner = Owner.find(params[:id])
+		@room = current_influencer.rooms.find_by(owner_id: @owner.id)
+
 	end
 
 	private

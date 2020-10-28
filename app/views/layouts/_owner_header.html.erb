@@ -1,5 +1,9 @@
     <nav class="nav navbar-nav navbar-left">
+      <% if current_owner %>
       <%= link_to owner_top_path do %>
+        <img src="/assets/logo.png" alt="logo" >
+      <% end %>
+      <% else %>
         <img src="/assets/logo.png" alt="logo" >
       <% end %>
     </nav>
@@ -13,10 +17,10 @@
           <li><%= link_to 'マイページ', owner_path(current_owner) %></li>
           <li><%= link_to 'インフルエンサー一覧', owner_influencers_path %></li>
           <li><%= link_to 'お気に入り一覧', owner_favorites_path %></li>
-          <li><%= link_to 'チャット一覧', "#" %></li>
+          <li><%= link_to 'チャット一覧', rooms_path %></li>
           <li><%= link_to 'ログアウト', destroy_owner_session_path, method: :delete %></li>
         <% else %>
-          <li><%= link_to 'About', "#" %></li>
+          <li><%= link_to 'About', root_path %></li>
           <li><%= link_to '新規登録', new_owner_registration_path %></li>
           <li><%= link_to 'ログイン', new_owner_session_path %></li>
         <% end %>

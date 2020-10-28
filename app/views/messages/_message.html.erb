@@ -1,0 +1,17 @@
+<% if message.sent_user == 'owner' %>
+
+  <%= attachment_image_tag message.owner, :profile_image, format: 'jpeg', class: "rounded-circle", fallback: "no_img.jpg", size: "30x30" %>
+  <span class="label label-default"><%= message.owner.name %></span>
+  <p><%= message.content %><p>
+
+<% elsif message.sent_user == 'influencer' %>
+
+  <%= attachment_image_tag message.influencer, :profile_image, format: 'jpeg', class: "rounded-circle", fallback: "no_img.jpg", size: "30x30" %>
+  <span class="label label-default"><%= message.influencer.name %></span>
+  <p><%= message.content %><p>
+
+<% end %>
+
+
+
+

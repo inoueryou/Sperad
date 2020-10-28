@@ -6,9 +6,8 @@ class Owner < ApplicationRecord
 
   has_many :favorites, dependent: :destroy
   attachment :profile_image
-  has_many :entries
   has_many :messages
-  has_many :rooms, through: :entries
+  has_many :rooms
 
   enum is_valid: {Available: true, Invalid: false}
     def active_for_authentication?

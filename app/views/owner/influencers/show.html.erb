@@ -7,6 +7,12 @@
 					<div class="item-image">
 						<%= attachment_image_tag @influencer, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_img.jpg" %>
 					</div>
+					<br>
+					<% if @room %>
+						<%= link_to "チャットへ", room_path(@room), class: "btn btn-success btn-lg" %>
+					<% else %>
+						<%= link_to "スカウトチャットを送る", rooms_path(influencer_id: @influencer.id), method: :post, class: "btn btn-success btn-lg" %>
+					<% end %>
 				</div>
 
 			<div class="col-xs-9">
@@ -44,7 +50,7 @@
 				</table>
 			</div>
 
-				<div class="row">
+				<div class="col-xs-3">
 					<%= link_to "インフルエンサー一覧へ", owner_influencers_path, class: "btn btn-primary" %>
 				</div>
 			</div>

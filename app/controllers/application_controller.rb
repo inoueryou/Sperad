@@ -5,11 +5,11 @@ class ApplicationController < ActionController::Base
 	def after_sign_out_path_for(resource)
 		case resource
 		when :influencer
-			new_influencer_session_path
+			root_path
 		when :owner
-			new_owner_session_path
+			root_path
 		else
-			influencer_top_path
+			root_path
 		end
   end
 
@@ -21,7 +21,7 @@ class ApplicationController < ActionController::Base
 		when Owner
 			owner_top_path
 		else
-			owner_top_path
+			root_path
 		end
 	end
 

@@ -6,7 +6,7 @@
     <%= csp_meta_tag %>
     <script src="https://kit.fontawesome.com/b5fa4724ff.js" crossorigin="anonymous"></script>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application' %>
   </head>
 
   <body>
@@ -15,21 +15,22 @@
       <header>
         <div class="container">
           <div class="row">
-            <% if influencer_signed_in? %>
-              <%= render 'layouts/influencer_header' %>
+            <% if !current_page?(root_path) %>
+              <% if influencer_signed_in? %>
+                <%= render 'layouts/influencer_header' %>
               <% else %>
-              <%= render 'layouts/owner_header' %>
+                <%= render 'layouts/owner_header' %>
+              <% end %>
             <% end %>
           </div>
         </div>
       </header>
-
       <%= yield %>
-
-      <footer>
-        <P>©Spread</p>
-      </footer>
-
+      <% if !current_page?(root_path) %>
+        <footer>
+          <P>©Spread</p>
+        </footer>
+      <% end %>
     </div>
   </body>
 </html>

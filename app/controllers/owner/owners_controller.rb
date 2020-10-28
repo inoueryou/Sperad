@@ -26,7 +26,7 @@ class Owner::OwnersController < ApplicationController
 		if @owner.update(is_valid: "Invalid")
 			sign_out current_owner
 		end
-		redirect_to new_owner_session_path
+		redirect_to root_path
 	end
 
 	private
