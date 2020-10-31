@@ -7,7 +7,6 @@
         <%= image_tag '/images/logo.png' %>
       <% end %>
     </nav>
-
     <nav class="nav navbar-nav navbar-right">
       <ul >
         <% if owner_signed_in? %>
@@ -21,8 +20,6 @@
           <li><%= link_to 'ログアウト', destroy_owner_session_path, method: :delete %></li>
         <% else %>
           <li><%= link_to 'About', root_path %></li>
-          <li><%= link_to '新規登録', new_owner_registration_path %></li>
-          <li><%= link_to 'ログイン', new_owner_session_path %></li>
         <% end %>
       </ul>
     </nav>
