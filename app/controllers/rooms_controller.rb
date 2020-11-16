@@ -1,4 +1,6 @@
 class RoomsController < ApplicationController
+	before_action :authenticate_influencer!
+	before_action :authenticate_owner!
 	def index
 		if current_influencer
 			@rooms = current_influencer.rooms
