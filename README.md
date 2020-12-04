@@ -29,7 +29,7 @@ https://docs.google.com/spreadsheets/d/1PPtGN2QtKulAorTLOUj-oKov6Dmc-eXS-N1c3VAo
 ## 開発環境
 - OS：Linux(CentOS)
 - 言語：HTML,CSS,JavaScript,Ruby,SQL
-- フレームワーク：Ruby on Rails,Bootstrap
+- フレームワーク：Ruby on Rails,Bootstrap,Action Cabl
 - JSライブラリ：jQuery
 - 仮想環境：Vagrant,VirtualBox
 
